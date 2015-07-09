@@ -90,6 +90,9 @@ gem 'string-scrub'	# for ruby <2.1
 gem 'therubyracer', '~> 0.12.2'
 gem 'typhoeus', '~> 0.6.3'
 gem 'uglifier', '>= 1.3.0'
+gem 'pg'
+gem 'unicorn'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors', '~> 1.1'
@@ -139,10 +142,4 @@ def on_heroku
     # platform.
     platform :ruby_18, &proc
   end
-end
-
-on_heroku do
-  gem 'pg'
-  gem 'unicorn'
-  gem 'rails_12factor', group: :production
 end
